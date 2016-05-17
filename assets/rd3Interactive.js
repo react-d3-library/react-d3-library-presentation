@@ -23,7 +23,7 @@ export default class Interactive extends Component {
     var svg = d3.select(div).append("svg")
       .attr({
         width: 2000,
-        height: 300,
+        height: 400,
         class: "svg-node"
       })
 
@@ -56,7 +56,7 @@ export default class Interactive extends Component {
       <div>
         <RD3Component className="RD3Component" data={this.state.data} />
           <Heading size={5} textColor="black">
-            With React D3 that won't be a problem
+            With React D3 Library that won't be a problem
           </Heading>
           <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
       </div>

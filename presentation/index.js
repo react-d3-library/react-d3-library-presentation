@@ -48,7 +48,7 @@ export default class Presentation extends React.Component {
             <Link href="https://github.com/FormidableLabs/spectacle">
               <Text bold caps textColor="tertiary">it's super sweet</Text>
             </Link>
-            <Text textSize="1.5em" margin="20px 0px 0px" bold>by andrew burke, daniel lee, and dave loyst!</Text>
+            <Text textSize="1.5em" margin="20px 0px 0px" bold>by andrew burke, danny lee, and dave loyst!</Text>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="rgb(34, 34, 34)" notes="You can even put notes on your slide. How awesome is that?">
@@ -64,12 +64,12 @@ export default class Presentation extends React.Component {
             </Heading>
             <Appear fid="1">
               <Heading size={.75} caps fit textColor="black">
-                D3 interacts the actual DOM
+                D3 interacts with the actual DOM
               </Heading>
             </Appear>
             <Appear fid="2">
               <Heading size={.75} caps fit textColor="black">
-                React creates a virtual DOM
+                React interacts with the virtual DOM
               </Heading>
             </Appear>
           </Slide>
@@ -124,8 +124,7 @@ export default class Presentation extends React.Component {
               MVP Features
             </Heading>
             <List>
-              <Appear><ListItem>Reworks core D3 Methods</ListItem></Appear>
-              <Appear><ListItem>Convert D3 static visualizations</ListItem></Appear>
+              <Appear><ListItem>Converts D3 into React Components</ListItem></Appear>
               <Appear><ListItem>Create simple charts in one line of code</ListItem></Appear>
               <Appear><ListItem>Maintain React's lifecycle and D3 syntax</ListItem></Appear>
             </List>

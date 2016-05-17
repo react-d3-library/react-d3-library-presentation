@@ -19,7 +19,7 @@ export default class Interactive extends Component {
     var svg = d3.select("body").append("svg")
       .attr({
         width: 2000,
-        height: 300,
+        height: 400,
         class: "svg-node"
       })
 
