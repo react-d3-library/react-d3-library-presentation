@@ -62,28 +62,21 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="white">
               The Problem
             </Heading>
-            <Appear fid="1">
               <Heading size={.75} caps fit textColor="black">
-                D3 interacts with the actual DOM
+                Noise
               </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={.75} caps fit textColor="black">
-                React interacts with the virtual DOM
-              </Heading>
-            </Appear>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
-              D3 will attach itself to the actual DOM
+              Our Problem Demo
             </Heading>
             <Interactive/>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} caps fit textColor="black">
-              Which ruins React's Life Cycle
+              Other Solutions
             </Heading>
             <InteractiveRemove/>
           </Slide>
@@ -92,52 +85,39 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="white">
               The Solution
             </Heading>
-            <Appear fid="1">
               <Heading size={.75} caps fit textColor="black">
-                Reroute D3 to React's Virtual DOM
+                Gif
               </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={.75} caps fit textColor="black">
-                Maintain D3's core features
-              </Heading>
-            </Appear>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
+            <Heading size={1} caps fit textColor="white">
+              Solution Demo
+            </Heading>
             <Rd3Interactive/>
           </Slide>
 
           <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
-              Benefits
+              Features
             </Heading>
             <List>
-              <Appear><ListItem>Simple to use yet highly flexible</ListItem></Appear>
-              <Appear><ListItem>Visualizations are part of React Lifecycle</ListItem></Appear>
-              <Appear><ListItem>Support for entire spectrum of users</ListItem></Appear>
+              <ListItem>Features</ListItem>
+              <ListItem>Features</ListItem>
+              <ListItem>Features</ListItem>
+              <ListItem>Features</ListItem>
             </List>
           </Slide>
 
           <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
-              MVP Features
+              Challenges
             </Heading>
             <List>
-              <Appear><ListItem>Converts D3 into React Components</ListItem></Appear>
-              <Appear><ListItem>Create simple charts in one line of code</ListItem></Appear>
-              <Appear><ListItem>Maintain React's lifecycle and D3 syntax</ListItem></Appear>
-            </List>
-          </Slide>
-
-          <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Coming soon
-            </Heading>
-            <List>
-              <Appear><ListItem>Full D3 functionality such as transitions, animations, canvas tags</ListItem></Appear>
-              <Appear><ListItem>Support for Redux/Flux and Immutable.js</ListItem></Appear>
-              <Appear><ListItem>Expanded template library</ListItem></Appear>
+              <ListItem>Features</ListItem>
+              <ListItem>Features</ListItem>
+              <ListItem>Features</ListItem>
+              <ListItem>Features</ListItem>
             </List>
           </Slide>
 
