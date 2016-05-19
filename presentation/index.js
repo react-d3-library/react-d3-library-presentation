@@ -16,11 +16,13 @@ import InteractiveRemove from "../assets/interactiveRemove";
 
 import Rd3Interactive from "../assets/rd3Interactive";
 
+import OtherProblems from "../assets/otherProblems";
+
 require("normalize.css");
 require("../src/themes/default/index.css");
 
 const images = {
-  template: require("../assets/template.png"),
+  falseComponent: require("../assets/falseComponent.png"),
 };
 
 preloader(images);
@@ -62,9 +64,9 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="white">
               The Problem
             </Heading>
-              <Heading size={.75} caps fit textColor="black">
-                Noise
-              </Heading>
+            <Heading size={.75} caps fit textColor="black">
+              Noise
+            </Heading>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
@@ -75,19 +77,33 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="black">
-              Other Solutions
-            </Heading>
-            <InteractiveRemove/>
+            <OtherProblems/>
+            <Image style={
+              {
+                position: "absolute",
+                top: -300,
+                left: -300
+              }
+            }
+            src={images.falseComponent.replace("/", "")} margin="0px auto 40px" height="750px"/>
+            <Image style={
+              {
+                position: "absolute",
+                top: -300,
+                left: 600
+
+              }
+            }
+            src={images.falseComponent.replace("/", "")} margin="0px auto 40px" height="750px"/>
           </Slide>
 
           <Slide transition={["slide"]} bgImage="primary">
             <Heading size={1} caps fit textColor="white">
               The Solution
             </Heading>
-              <Heading size={.75} caps fit textColor="black">
-                Gif
-              </Heading>
+            <Heading size={.75} caps fit textColor="black">
+              Gif
+            </Heading>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
