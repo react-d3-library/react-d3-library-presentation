@@ -4,7 +4,7 @@ var flare = require('./flare');
 module.exports = function() {
   var div = document.createElement('div');
 
-  var diameter = 800;
+  var diameter = 1100;
 
   var tree = d3.layout.tree()
       .size([360, diameter / 2 - 120])
@@ -16,6 +16,8 @@ module.exports = function() {
   var svg = d3.select(div).append("svg")
       .attr("width", diameter)
       .attr("height", diameter - 150)
+      .style("margin-top", -200)
+      .style("margin-left", -40)
       .append("g")
       .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 

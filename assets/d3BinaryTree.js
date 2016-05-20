@@ -7,10 +7,10 @@ module.exports = function() {
   // Tree configuration
   var branches = [];
   var seed = {i: 0, x: 420, y: 600, a: 0, l: 130, d:0}; // a = angle, l = length, d = depth
-  var da = 0.5; // Angle delta
-  var dl = 0.75; // Length delta (factor)
-  var ar = 0.9; // Randomness
-  var maxDepth = 7;
+  var da = 0.4; // Angle delta
+  var dl = 0.80; // Length delta (factor)
+  var ar = 0.75; // Randomness
+  var maxDepth = 8;
 
 
   // Tree creation functions
@@ -76,9 +76,9 @@ module.exports = function() {
   d3.select(div)
     .append('svg')
     .attr("width", 800)
-    .attr("height", 535)
-    .style('margin-left', 80)
-    .style('margin-top', 45)
+    .attr("height", 700)
+    .style('margin-left', 60)
+    .style('margin-top', 10)
     .selectAll('line')
     .data(branches)
     .enter()
@@ -90,13 +90,6 @@ module.exports = function() {
     .attr('y2', y2)
     .style('stroke-width', function(d) {return parseInt(maxDepth + 1 - d.d) + 'px';})
     .attr('id', function(d) {return 'id-'+d.i;})
-    .on('mouseover', function() {
-      e.currentTarget.style.stroke = "green"
-      e.currentTarget.parentElement.style.stroke = "green"
-    })
-    .on('mouseout', function() {
-      e.currentTarget.style.stroke = 'white'
-    })
 
   return div;
 }

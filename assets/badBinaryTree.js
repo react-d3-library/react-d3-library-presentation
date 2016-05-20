@@ -76,7 +76,7 @@ module.exports = React.createClass({
       .attr("width", 800)
       .attr("height", 650)
       .attr('class', 'svg-tree')
-      .style('margin-left', 500)
+      .style('margin-left', 540)
       .style('margin-top', 150)
       .selectAll('line')
       .data(branches)

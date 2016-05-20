@@ -3,6 +3,10 @@
           transform-origin: center center;
 }
 
+#rd3-demo {
+  width: 1200px !important;
+}
+
 svg, circle {
   position: absolute;
   top: 0;
