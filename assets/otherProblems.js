@@ -10,6 +10,7 @@ export default class Interactive extends Component {
       top: -450,
       left: -300
     }
+
     return (
       <div>
         <Heading style={headerStyles} size={1} textColor="white">
