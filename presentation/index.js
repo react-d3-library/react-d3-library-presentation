@@ -14,11 +14,15 @@ import Rd3BinaryTree from "../assets/rd3binaryTree";
 
 import BadTree from "../assets/badBinaryTree";
 
+import OtherProblems from "../assets/otherProblems";
+
 require("normalize.css");
 require("../src/themes/default/index.css");
 
 const images = {
-  template: require("../assets/template.png"),
+  falseComponent: require("../assets/falseComponent.png"),
+  noise: require("../assets/reactd3problem.jpg"),
+  chart: require("../assets/chart.png"),
 };
 
 preloader(images);
@@ -33,7 +37,7 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
 
-          <Slide transition={["zoom"]} bgColor="primary">
+          <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
               React D3 Library
             </Heading>
@@ -56,42 +60,63 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgImage="primary">
+          <Slide transition={["zoom"]} bgImage="primary">
             <Heading size={1} caps fit textColor="white">
               The Problem
             </Heading>
-              <Heading size={.75} caps fit textColor="black">
-                Noise
-              </Heading>
+            <Image style={
+              {
+                position: "absolute",
+                top: -345,
+                left: -365
+
+              }
+            }
+            src={images.noise.replace("/", "")} height="900px" width="1750px"/>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Our Problem Demo
-            </Heading>
+            <div style={{marginTop: -50}}>
+              <Heading size={1} caps fit textColor="tertiary">
+                Our Problem Demo
+              </Heading>
+            </div>
             <BadTree />
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="black">
-              Other Solutions
-            </Heading>
-            <InteractiveRemove/>
+            <OtherProblems/>
+            <Image style={
+              {
+                position: "absolute",
+                top: -300,
+                left: -300
+              }
+            }
+            src={images.chart.replace("/", "")} margin="0px auto 40px" height="750px"/>
+            <Image style={
+              {
+                position: "absolute",
+                top: -300,
+                left: 650
+
+              }
+            }
+            src={images.falseComponent.replace("/", "")} margin="0px auto 40px" height="620px" width="640px"/>
           </Slide>
 
           <Slide transition={["slide"]} bgImage="primary">
             <Heading size={1} caps fit textColor="white">
               The Solution
             </Heading>
-              <Heading size={.75} caps fit textColor="black">
-                Gif
-              </Heading>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="white">
-              Solution Demo
-            </Heading>
+            <div style={{marginTop: -50}}>
+              <Heading size={1} caps fit textColor="tertiary">
+                Solution Demo
+              </Heading>
+            </div>
             <Rd3BinaryTree />
           </Slide>
 
@@ -100,10 +125,10 @@ export default class Presentation extends React.Component {
               Features
             </Heading>
             <List>
-              <ListItem>Features</ListItem>
-              <ListItem>Features</ListItem>
-              <ListItem>Features</ListItem>
-              <ListItem>Features</ListItem>
+              <ListItem>React Lifecycle Integration</ListItem>
+              <ListItem>D3 Animation and Transitions</ListItem>
+              <ListItem>Custom React D3 Templates</ListItem>
+              <ListItem>Simple</ListItem>
             </List>
           </Slide>
 
@@ -134,3 +159,12 @@ export default class Presentation extends React.Component {
     );
   }
 }
+
+
+
+
+
+
+
+
+
