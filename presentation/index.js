@@ -10,11 +10,9 @@ import preloader from "../src/utils/preloader";
 
 import createTheme from "../src/themes/default";
 
-import Interactive from "../assets/interactive";
+import Rd3BinaryTree from "../assets/rd3binaryTree";
 
-import InteractiveRemove from "../assets/interactiveRemove";
-
-import Rd3Interactive from "../assets/rd3Interactive";
+import BadTree from "../assets/badBinaryTree";
 
 require("normalize.css");
 require("../src/themes/default/index.css");
@@ -71,7 +69,7 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="tertiary">
               Our Problem Demo
             </Heading>
-            <Interactive/>
+            <BadTree />
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
@@ -94,7 +92,7 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="white">
               Solution Demo
             </Heading>
-            <Rd3Interactive/>
+            <Rd3BinaryTree />
           </Slide>
 
           <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
