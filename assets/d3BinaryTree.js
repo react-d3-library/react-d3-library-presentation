@@ -78,7 +78,7 @@ module.exports = function() {
     .attr("width", 800)
     .attr("height", 535)
     .style('margin-left', 80)
-    .style('margin-top', 20)
+    .style('margin-top', 45)
     .selectAll('line')
     .data(branches)
     .enter()

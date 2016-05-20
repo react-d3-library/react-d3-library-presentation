@@ -74,14 +74,15 @@ module.exports = React.createClass({
     d3.select('body')
       .append('svg')
       .attr("width", 800)
-      .attr("height", 500)
+      .attr("height", 650)
       .attr('class', 'svg-tree')
-      .style('margin-left', 200)
+      .style('margin-left', 500)
+      .style('margin-top', 150)
       .selectAll('line')
       .data(branches)
       .enter()
       .append('line')
-      .attr('stroke', 'white')
+      .attr('stroke', '#af111c')
       .attr('x1', x1)
       .attr('y1', y1)
       .attr('x2', x2)
@@ -106,8 +107,9 @@ module.exports = React.createClass({
     const styleMakeTree = {
       background: "black",
       padding: 10,
-      marginTop: 380,
+      marginTop: 550,
       marginRight: 5,
+      marginBottom: 80,
       textTransform: "uppercase",
       border: "none",
       color: "white",

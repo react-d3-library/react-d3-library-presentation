@@ -76,9 +76,11 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Our Problem Demo
-            </Heading>
+            <div style={{marginTop: -50}}>
+              <Heading size={1} caps fit textColor="tertiary">
+                Our Problem Demo
+              </Heading>
+            </div>
             <BadTree />
           </Slide>
 
@@ -110,9 +112,11 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="white">
-              Solution Demo
-            </Heading>
+            <div style={{marginTop: -50}}>
+              <Heading size={1} caps fit textColor="tertiary">
+                Solution Demo
+              </Heading>
+            </div>
             <Rd3BinaryTree />
           </Slide>
 
