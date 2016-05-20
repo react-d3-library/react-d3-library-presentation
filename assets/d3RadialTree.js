@@ -17,6 +17,7 @@ module.exports = function() {
       .attr("width", diameter)
       .attr("height", diameter - 150)
       .style("margin-top", -200)
+      .style("margin-left", -40)
       .append("g")
       .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 

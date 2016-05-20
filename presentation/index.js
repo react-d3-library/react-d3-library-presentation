@@ -23,6 +23,7 @@ const images = {
   falseComponent: require("../assets/falseComponent.png"),
   noise: require("../assets/reactd3problem.jpg"),
   chart: require("../assets/chart.png"),
+  rerouteD3: require("../assets/rerouteD3.gif")
 };
 
 preloader(images);
@@ -41,15 +42,14 @@ export default class Presentation extends React.Component {
             <Heading size={1} fit caps lineHeight={1} textColor="black">
               React D3 Library
             </Heading>
-            <Heading size={1} fit caps>
-              A codesmith Presentation
-            </Heading>
             <Heading size={1} fit caps textColor="black">
               where you can use d3 in react
             </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text bold caps textColor="tertiary">it's super sweet</Text>
-            </Link>
+            <Text bold caps textColor="black">it's super sweet</Text>
+            <Heading size={1} fit caps>
+              A codesmith Presentation
+            </Heading>
+            <Text bold caps textColor="tertiary">in React</Text>
             <Text textSize="1.5em" margin="20px 0px 0px" bold>by andrew burke, danny lee, and dave loyst!</Text>
           </Slide>
 
@@ -76,15 +76,6 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <div style={{marginTop: -50}}>
-              <Heading size={1} caps fit textColor="tertiary">
-                Our Problem Demo
-              </Heading>
-            </div>
-            <BadTree />
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="primary">
             <OtherProblems/>
             <Image style={
               {
@@ -105,10 +96,24 @@ export default class Presentation extends React.Component {
             src={images.falseComponent.replace("/", "")} margin="0px auto 40px" height="620px" width="640px"/>
           </Slide>
 
+          <Slide transition={["slide"]} bgColor="primary">
+            <div style={{marginTop: -50}}>
+              <Heading size={1} caps fit textColor="tertiary">
+                Example of the problem
+              </Heading>
+            </div>
+            <BadTree />
+          </Slide>
+
           <Slide transition={["slide"]} bgImage="primary">
-            <Heading size={1} caps fit textColor="white">
-              The Solution
-            </Heading>
+            <img src="http://i.imgur.com/pSn14P1.gif" style={
+              {
+                position: "absolute",
+                top: -400,
+                left: -270
+
+              }
+            } width="1600" height="850"/>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
@@ -132,10 +137,9 @@ export default class Presentation extends React.Component {
               Challenges
             </Heading>
             <List>
-              <ListItem>Features</ListItem>
-              <ListItem>Features</ListItem>
-              <ListItem>Features</ListItem>
-              <ListItem>Features</ListItem>
+              <ListItem>Recursive Build</ListItem>
+              <ListItem>Integrating D3 into React's Lifecycle</ListItem>
+              <ListItem>Altering D3 Source Code</ListItem>
             </List>
           </Slide>
 
@@ -147,6 +151,10 @@ export default class Presentation extends React.Component {
             <Heading size={.75} caps fit textColor="black">
               Andrew, Daniel, and Dave
             </Heading>
+            <Heading size={.25} textColor="black">
+              https://github.com/react-d3-library/react-d3-library
+            </Heading>
+
           </Slide>
 
         </Deck>

@@ -77,7 +77,7 @@ module.exports = function() {
     .append('svg')
     .attr("width", 800)
     .attr("height", 700)
-    .style('margin-left', 80)
+    .style('margin-left', 60)
     .style('margin-top', 10)
     .selectAll('line')
     .data(branches)
