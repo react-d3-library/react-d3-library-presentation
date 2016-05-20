@@ -1,5 +1,7 @@
 import React from 'react';
-import node from './d3BinaryTree';
+import binaryTree from './d3BinaryTree';
+import mergeSort from './d3MergeSort';
+import radialTree from './d3RadialTree';
 import rd3 from 'react-d3-library';
 
 var Rd3Component = rd3.Component;
@@ -11,16 +13,28 @@ module.exports = React.createClass({
   },
 
   createTree: function() {
-    var d3Node = node();
-    this.setState({d3: d3Node});
+    var binary = binaryTree();
+    this.setState({d3: binary});
+  },
+
+  createRadialTree: function() {
+    var radial = radialTree();
+    this.setState({d3: radial});
+  },
+
+  createMergeSort: function() {
+    var merge = mergeSort();
+    this.setState({d3: merge});
   },
 
   highlight: function(e) {
     e.target.style.background = 'white';
+    e.target.style.color = 'black';
   },
 
   deHighlight: function(e) {
     e.target.style.background = 'black';
+    e.target.style.color = 'white';
   },
 
   render: function() {
@@ -39,7 +53,9 @@ module.exports = React.createClass({
     return (
       <div>
         <Rd3Component data={this.state.d3}/>
-        <button style={styleMakeTree} type='button' onClick={this.createTree} onMouseDown={this.highlight} onMouseUp={this.deHighlight}>Make Tree</button>
+        <button style={styleMakeTree} type='button' onClick={this.createTree} onMouseDown={this.highlight} onMouseUp={this.deHighlight}>Binary Tree</button>
+        <button style={styleMakeTree} type='button' onClick={this.createRadialTree} onMouseDown={this.highlight} onMouseUp={this.deHighlight}>Radial Tree</button>
+        <button style={styleMakeTree} type='button' onClick={this.createMergeSort} onMouseDown={this.highlight} onMouseUp={this.deHighlight}>Merge Sort</button>
       </div>
     )
   }
