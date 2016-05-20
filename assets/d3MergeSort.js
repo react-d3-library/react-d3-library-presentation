@@ -83,6 +83,8 @@ module.exports = function() {
   var svg = d3.select(div).append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
+      .style("margin-left", 100)
+      .style("margin-top", 50)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 

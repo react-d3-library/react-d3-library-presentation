@@ -41,7 +41,7 @@ module.exports = React.createClass({
     const styleMakeTree = {
       background: "black",
       padding: 10,
-      marginTop: 500,
+      marginTop: 725,
       marginRight: 5,
       textTransform: "uppercase",
       border: "none",
@@ -51,7 +51,7 @@ module.exports = React.createClass({
       fontSize: "1.5em",
     };
     return (
-      <div>
+      <div id="rd3-demo">
         <Rd3Component data={this.state.d3}/>
         <button style={styleMakeTree} type='button' onClick={this.createTree} onMouseDown={this.highlight} onMouseUp={this.deHighlight}>Binary Tree</button>
         <button style={styleMakeTree} type='button' onClick={this.createRadialTree} onMouseDown={this.highlight} onMouseUp={this.deHighlight}>Radial Tree</button>
