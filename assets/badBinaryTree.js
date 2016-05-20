@@ -93,10 +93,12 @@ module.exports = React.createClass({
 
   highlight: function(e) {
     e.target.style.background = 'white';
+    e.target.style.color = 'black';
   },
 
   deHighlight: function(e) {
     e.target.style.background = 'black';
+    e.target.style.color = 'white';
   },
 
   deleteTree: function() {
