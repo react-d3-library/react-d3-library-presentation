@@ -14,7 +14,7 @@ import Rd3BinaryTree from "../assets/rd3binaryTree";
 
 import BadTree from "../assets/badBinaryTree";
 
-import OtherProblems from "../assets/otherProblems";
+import Features from "../assets/Features";
 
 require("normalize.css");
 require("../src/themes/default/index.css");
@@ -76,27 +76,6 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <OtherProblems/>
-            <Image style={
-              {
-                position: "absolute",
-                top: -300,
-                left: -300
-              }
-            }
-            src={images.chart.replace("/", "")} margin="0px auto 40px" height="750px"/>
-            <Image style={
-              {
-                position: "absolute",
-                top: -300,
-                left: 650
-
-              }
-            }
-            src={images.falseComponent.replace("/", "")} margin="0px auto 40px" height="620px" width="640px"/>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="primary">
             <div style={{marginTop: -50}}>
               <Heading size={1} caps fit textColor="tertiary">
                 Example of the problem
@@ -121,15 +100,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Features
-            </Heading>
-            <List>
-              <ListItem>React Lifecycle Integration</ListItem>
-              <ListItem>D3 Animation and Transitions</ListItem>
-              <ListItem>Custom React D3 Templates</ListItem>
-              <ListItem>Simple</ListItem>
-            </List>
+            <Features />
           </Slide>
 
           <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
@@ -169,5 +140,24 @@ export default class Presentation extends React.Component {
 
 
 
+//Other Problems
+// <Slide transition={["slide"]} bgColor="primary">
+//   <OtherProblems/>
+//   <Image style={
+//     {
+//       position: "absolute",
+//       top: -300,
+//       left: -300
+//     }
+//   }
+//   src={images.chart.replace("/", "")} margin="0px auto 40px" height="750px"/>
+//   <Image style={
+//     {
+//       position: "absolute",
+//       top: -300,
+//       left: 650
 
-
+//     }
+//   }
+//   src={images.falseComponent.replace("/", "")} margin="0px auto 40px" height="620px" width="640px"/>
+// </Slide>
