@@ -13,6 +13,34 @@ svg, circle {
   left: 0;
 }
 
+.lineChartY, .lineChartX {
+  fill: white;
+}
+
+.lineChartY {
+  fill: white;
+  font-size: 20px;
+}
+
+.lineChartX {
+  fill: white;
+  font-size: 14px;
+}
+
+.lineChartY path, .lineChartX path{
+  fill: white;
+}
+
+.lineChart {
+  fill: none;
+  stroke: white;
+  stroke-width: 5px;
+}
+
+.lineChartY line {
+  fill: white;
+}
+
 .lineMS {
   fill: none;
   stroke: #000;
