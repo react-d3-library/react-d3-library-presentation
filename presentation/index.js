@@ -23,7 +23,17 @@ const images = {
   falseComponent: require("../assets/falseComponent.png"),
   noise: require("../assets/reactd3problem.jpg"),
   chart: require("../assets/chart.png"),
-  rerouteD3: require("../assets/rerouteD3.gif")
+  rerouteD3: require("../assets/rerouteD3.gif"),
+  badCode1: require("../assets/badCode1.png"),
+  badCode2: require("../assets/badCode2.png"),
+  badCode3: require("../assets/badCode3.png"),
+  badCode4: require("../assets/badCode4.png"),
+  badCode5: require("../assets/badCode5.png"),
+  ourD3: require("../assets/ourD3.png"),
+  ourReact: require("../assets/ourReact.png"),
+  d31: require("../assets/d31.png"),
+  d32: require("../assets/d32.png"),
+  d33: require("../assets/d33.png")
 };
 
 preloader(images);
@@ -119,6 +129,117 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="primary">
             <Rd3BinaryTree />
           </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+          
+              <Image
+                src={images.d31.replace("/", "")} style={
+                  {
+                    border: '1px solid white',
+                    position: 'absolute',
+                    left: -200,
+                    top: -400
+                  }
+                } height="400px" width="300px"/>
+              <Image
+                src={images.d32.replace("/", "")} style={
+                  {
+                    border: '1px solid white',
+                    position: 'absolute',
+                    left: -175,
+                    top: -25
+                  }
+                } height="350px" width="400px"/>
+               <Image
+                src={images.d33.replace("/", "")} style={
+                  {
+                    border: '1px solid white',
+                    position: 'absolute',
+                    left: -150,
+                    top: 300
+                  }
+                } height="150px" width="200px"/>
+              <Appear style={
+                {
+                  border: '1px solid white',
+                  position: 'absolute',
+                  top: -400,
+                  left: 425
+                }
+              } fid='1'>
+                <Image
+                  src={images.badCode1.replace("/", "")} height="400px" width="800px"/>
+              </Appear>
+              <Appear style={
+                {
+                  border: '1px solid white',
+                  position: 'absolute',
+                  top: -275,
+                  left: 475
+                }
+              } fid='2'>
+                <Image
+                  src={images.badCode2.replace("/", "")} height="300px" width="450px"/>
+              </Appear>
+              <Appear style={
+                {
+                  border: '1px solid white',
+                  position: 'absolute',
+                  top: -200,
+                  left: 500
+                }
+              } fid='3'>
+                <Image
+                  src={images.badCode3.replace("/", "")} height="620px" width="640px"/>
+              </Appear>
+              <Appear style={
+                {
+                  border: '1px solid white',
+                  position: 'absolute',
+                  top: -150,
+                  left: 525
+                }
+              } fid='4'>
+                <Image
+                  src={images.badCode4.replace("/", "")} height="200px" width="700px"/>
+              </Appear>
+              <Appear style={
+                {
+                  border: '1px solid white',
+                  position: 'absolute',
+                  top: -50,
+                  left: 550
+                }
+              } fid='5'>
+                <Image
+                  src={images.badCode5.replace("/", "")} height="250px" width="375px"/>
+              </Appear>
+
+
+            <Appear style={
+              {
+                border: '1px solid white',
+                position: 'absolute',
+                left: 500,
+                top: -400
+              }
+            }fid='6'>
+              <Image
+                src={images.ourD3.replace("/", "")} height="500px" width="600px"/>
+            </Appear>
+            <Appear style={
+              {
+                border: '1px solid white',
+                position: 'absolute',
+                left: 500,
+                top: 110
+              }
+            } fid='6'>
+              <Image
+                src={images.ourReact.replace("/", "")} height="350px" width="500px"/>
+            </Appear>
+          </Slide>
+
 
           <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
