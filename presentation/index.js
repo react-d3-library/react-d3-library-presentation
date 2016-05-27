@@ -110,7 +110,6 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-          
               <Image
                 src={images.d31.replace("/", "")} style={
                   {
@@ -193,8 +192,36 @@ export default class Presentation extends React.Component {
                 <Image
                   src={images.badCode5.replace("/", "")} height="250px" width="375px"/>
               </Appear>
+          </Slide>
 
-
+          <Slide transition={["slide"]} bgImage="primary">
+              <Image
+                src={images.d31.replace("/", "")} style={
+                  {
+                    border: '1px solid white',
+                    position: 'absolute',
+                    left: -200,
+                    top: -400
+                  }
+                } height="400px" width="300px"/>
+              <Image
+                src={images.d32.replace("/", "")} style={
+                  {
+                    border: '1px solid white',
+                    position: 'absolute',
+                    left: -175,
+                    top: -25
+                  }
+                } height="350px" width="400px"/>
+               <Image
+                src={images.d33.replace("/", "")} style={
+                  {
+                    border: '1px solid white',
+                    position: 'absolute',
+                    left: -150,
+                    top: 300
+                  }
+                } height="150px" width="200px"/>
             <Appear style={
               {
                 border: '1px solid white',
@@ -202,7 +229,7 @@ export default class Presentation extends React.Component {
                 left: 500,
                 top: -400
               }
-            }fid='6'>
+            }fid='1'>
               <Image
                 src={images.ourD3.replace("/", "")} height="500px" width="600px"/>
             </Appear>
@@ -213,7 +240,7 @@ export default class Presentation extends React.Component {
                 left: 500,
                 top: 110
               }
-            } fid='6'>
+            } fid='2'>
               <Image
                 src={images.ourReact.replace("/", "")} height="350px" width="500px"/>
             </Appear>
