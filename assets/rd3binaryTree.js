@@ -7,7 +7,7 @@ var Rd3Component = rd3.Component;
 module.exports = React.createClass({
 
   getInitialState: function() {
-    return {d3: ''}
+    return {d3: '', createMe: false}
   },
 
   createTree: function() {
