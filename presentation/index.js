@@ -72,17 +72,41 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["zoom"]} bgImage="primary">
             <Heading size={1} caps fit textColor="white">
-              The Problem
+              Under the Hood Diagram
             </Heading>
-            <Image style={
-              {
-                position: "absolute",
-                top: -345,
-                left: -365
-
-              }
-            }
-            src={images.noise.replace("/", "")} height="900px" width="1750px"/>
+              <br /> <br />
+              <div style={{float: 'left', marginLeft: '-200px'}}>
+                D3 works by grabbing elements from the DOM
+                <br />
+                Then binds data to the elements
+                <br />
+                <Image 
+                  src='http://4.bp.blogspot.com/-bP2TWBLIj74/Usx_So4o80I/AAAAAAAADJo/7jb8erBdYGo/s1600/d3.png'
+                  style={
+                    {
+                      width: '400px',
+                      height: '400px',
+                      position: 'relative'
+                    }
+                  }
+                />
+              </div>
+              <br /> <br />
+              <div style={{marginLeft: '400px', marginTop: '-80px'}}>
+                React works by abstracting a DOM representation
+                <br />
+                Only updates changes
+                <Image 
+                  src='http://image.slidesharecdn.com/reactjs-flux-160117101746/95/react-and-flux-life-cycle-with-jsx-react-router-and-jest-unit-testing-4-638.jpg?cb=1453658434'
+                  style={
+                    {
+                      width: '400px',
+                      height: '400px',
+                      position: 'relative'
+                    }
+                  }
+                />
+              </div>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
@@ -94,21 +118,6 @@ export default class Presentation extends React.Component {
             <BadTree />
           </Slide>
 
-          <Slide transition={["slide"]} bgImage="primary">
-            <img src="http://i.imgur.com/pSn14P1.gif" style={
-              {
-                position: "absolute",
-                top: -400,
-                left: -270
-
-              }
-            } width="1600" height="850"/>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="primary">
-            <Rd3BinaryTree />
-          </Slide>
-
           <Slide transition={["slide"]} bgColor="primary">
               <Image
                 src={images.d31.replace("/", "")} style={
@@ -116,9 +125,9 @@ export default class Presentation extends React.Component {
                     border: '1px solid white',
                     position: 'absolute',
                     left: -200,
-                    top: -400
+                    top: -500
                   }
-                } height="400px" width="300px"/>
+                } height="700px" width="500px"/>
               <Image
                 src={images.d32.replace("/", "")} style={
                   {
@@ -127,16 +136,7 @@ export default class Presentation extends React.Component {
                     left: -175,
                     top: -25
                   }
-                } height="350px" width="400px"/>
-               <Image
-                src={images.d33.replace("/", "")} style={
-                  {
-                    border: '1px solid white',
-                    position: 'absolute',
-                    left: -150,
-                    top: 300
-                  }
-                } height="150px" width="200px"/>
+                } height="650px" width="600px"/>
               <Appear style={
                 {
                   border: '1px solid white',
@@ -195,15 +195,30 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgImage="primary">
+            <img src="http://i.imgur.com/pSn14P1.gif" style={
+              {
+                position: "absolute",
+                top: -400,
+                left: -270
+
+              }
+            } width="1600" height="850"/>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+            <Rd3BinaryTree />
+          </Slide>
+
+          <Slide transition={["slide"]} bgImage="primary">
               <Image
                 src={images.d31.replace("/", "")} style={
                   {
                     border: '1px solid white',
                     position: 'absolute',
                     left: -200,
-                    top: -400
+                    top: -500
                   }
-                } height="400px" width="300px"/>
+                } height="700px" width="500px"/>
               <Image
                 src={images.d32.replace("/", "")} style={
                   {
@@ -212,16 +227,7 @@ export default class Presentation extends React.Component {
                     left: -175,
                     top: -25
                   }
-                } height="350px" width="400px"/>
-               <Image
-                src={images.d33.replace("/", "")} style={
-                  {
-                    border: '1px solid white',
-                    position: 'absolute',
-                    left: -150,
-                    top: 300
-                  }
-                } height="150px" width="200px"/>
+                } height="650px" width="600px"/>
             <Appear style={
               {
                 border: '1px solid white',
@@ -252,14 +258,11 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Challenges
-            </Heading>
-            <List>
-              <ListItem>Recursive Build</ListItem>
-              <ListItem>Integrating D3 into React's Lifecycle</ListItem>
-              <ListItem>Altering D3 Source Code</ListItem>
-            </List>
+            More Examples
+          </Slide>
+
+          <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
+            List of Supported Examples
           </Slide>
 
           <Slide transition={["fade"]} bgColor="tertiary">

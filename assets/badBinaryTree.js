@@ -89,6 +89,7 @@ module.exports = React.createClass({
       .attr('y2', y2)
       .style('stroke-width', function(d) {return parseInt(maxDepth + 1 - d.d) + 'px';})
       .attr('id', function(d) {return 'id-'+d.i;})
+
   },
 
   highlight: function(e) {
