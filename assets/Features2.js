@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Heading from "../src/components/heading";
 import Fill from "../src/components/fill";
+import List from "../src/components/list";
+import ListItem from "../src/components/list-item";
+import Appear from "../src/components/appear";
 import Layout from "../src/components/layout";
 import StackedBar from "./convertStackedBarChart";
 import TemplateLineChart from "./convertLineChart";
@@ -16,6 +19,7 @@ export default class Interactive extends Component {
     const styleMakeTree = {
       background: "white",
       padding: 10,
+      paddinTop: 10,
       marginLeft: 50,
       display: 'inline',
       float: 'left',
@@ -36,20 +40,26 @@ export default class Interactive extends Component {
       height: 100
     }
 
+    const divStyles2 = {
+      marginTop: -350,
+      marginLeft: -383,
+      width: 1800,
+      height: 100
+    }
+
+
     return (
       <div>
-        <Heading style={headerStyles} size={1} textColor="white">
+        <Heading size={1} textColor="white">
           Features:
         </Heading>
-        <div style={divStyles}>
-          <li style={styleMakeTree} >React + D3</li>
-          <li style={styleMakeTree} >Transitions</li>
-          <li style={styleMakeTree} >Animations</li>
-          <li style={styleMakeTree} >Templates</li>
-          <li style={styleMakeTree} >Flexibility</li>
-        </div>
-        <StackedBar />
-        <TemplateLineChart />
+                    <List>
+              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
+              <Appear><ListItem>Autofit text</ListItem></Appear>
+              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
+              <Appear><ListItem>PDF export</ListItem></Appear>
+              <Appear><ListItem>And...</ListItem></Appear>
+            </List>
       </div>
     );
   }

@@ -15,6 +15,7 @@ import Rd3BinaryTree from "../assets/rd3binaryTree";
 import BadTree from "../assets/badBinaryTree";
 
 import Features from "../assets/Features";
+import Features2 from "../assets/Features2";
 
 require("normalize.css");
 require("../src/themes/default/index.css");
@@ -33,7 +34,9 @@ const images = {
   ourReact: require("../assets/ourReact.png"),
   d31: require("../assets/d31.png"),
   d32: require("../assets/d32.png"),
-  d33: require("../assets/d33.png")
+  d33: require("../assets/d33.png"),
+  intro: require("../assets/introImg.png"),
+  logo: require("../assets/logo.png")
 };
 
 preloader(images);
@@ -48,19 +51,23 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
 
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
+          <Slide transition={["slide"]} bgColor="#222">
+            <div style={{position: 'absolute', top: '-350px'}}>
+            <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
               React D3 Library
             </Heading>
-            <Heading size={1} fit caps textColor="black">
-              where you can use d3 in react
-            </Heading>
-            <Text bold caps textColor="black">it's super sweet</Text>
+             <Image
+                src={images.logo.replace("/", "")} style={
+                {
+                  margin: "40px 0"
+                }
+                } height="450px" width="400px"/>
             <Heading size={1} fit caps>
               A codesmith Presentation
             </Heading>
             <Text bold caps textColor="tertiary">in React</Text>
-            <Text textSize="1.5em" margin="20px 0px 0px" bold>by andrew burke, danny lee, and dave loyst!</Text>
+            <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>by andrew burke, danny lee, and dave loyst!</Text>
+            </div>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="rgb(34, 34, 34)" notes="You can even put notes on your slide. How awesome is that?">
@@ -80,7 +87,7 @@ export default class Presentation extends React.Component {
                 <br />
                 Then binds data to the elements
                 <br />
-                <Image 
+                <Image
                   src='http://4.bp.blogspot.com/-bP2TWBLIj74/Usx_So4o80I/AAAAAAAADJo/7jb8erBdYGo/s1600/d3.png'
                   style={
                     {
@@ -96,7 +103,7 @@ export default class Presentation extends React.Component {
                 React works by abstracting a DOM representation
                 <br />
                 Only updates changes
-                <Image 
+                <Image
                   src='http://image.slidesharecdn.com/reactjs-flux-160117101746/95/react-and-flux-life-cycle-with-jsx-react-router-and-jest-unit-testing-4-638.jpg?cb=1453658434'
                   style={
                     {
@@ -257,12 +264,15 @@ export default class Presentation extends React.Component {
             <Features />
           </Slide>
 
-          <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
-            More Examples
-          </Slide>
-
-          <Slide transition={["slide", "spin"]} bgColor="secondary" textColor="primary">
-            List of Supported Examples
+          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+            <Heading size={1} textColor="white">
+              Supports:
+            </Heading>
+            <List>
+                Animations, Brush, Canvas, Tags, Chords, Clusters, Drag, Event, Listeners, Force, Graphs, Histograms
+                Layouts, Paths, Polygons, Projections, Quadtree, Ranges, Scales, Shapes, Streams
+                Timers, Tooltips, Transitions, Trees, Voronoi, Zoom
+            </List>
           </Slide>
 
           <Slide transition={["fade"]} bgColor="tertiary">
