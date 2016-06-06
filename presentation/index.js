@@ -72,9 +72,6 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["slide"]} bgColor="rgb(34, 34, 34)" notes="You can even put notes on your slide. How awesome is that?">
             <Image src="https://s3.amazonaws.com/media-p.slid.es/uploads/473947/images/2571254/How-to-integrate-React-D3-The-right-way-adeveloperdiary.com-4.jpg" margin="0px auto 40px" height="293px"/>
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
-            </Heading>
           </Slide>
 
           <Slide transition={["zoom"]} bgImage="primary">
